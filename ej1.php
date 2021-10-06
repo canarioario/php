@@ -4,5 +4,4 @@ Ponga un comentario con el tipo de dato que contienen.
 /*
 <?php
 
-echo '';
 ?>
