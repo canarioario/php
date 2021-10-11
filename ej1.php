@@ -8,7 +8,7 @@ Ponga un comentario con el tipo de dato que contienen.
  $a = 10;
  $b = 25;
 // mostrar variables
-echo  "La variable 1 es igual =  $a <br>";
-echo  "La variable 2 es igual =  $b ";
+echo  "La variable 1 es igual = ". $a ."<br/>";
+echo  "La variable 2 es igual =  " . $b ;
 
 ?>
