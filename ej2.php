@@ -7,7 +7,7 @@ Ejercicio 2. Escribe un programa que imprima por pantalla los cuadrados
 
 for ($a = 1; $a<=30; $a++) {
 
-    echo $a * $a; //  imprimir por pantalla los cuadrados
+    echo "El cuadrado de ". $a . " es ".  ($a * $a); //  imprimir por pantalla los cuadrados
 
     echo "<br />";
 
