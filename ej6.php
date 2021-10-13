@@ -5,9 +5,18 @@ Recorrerlo con FOR para mostrar por pantalla los doce nombres.
 */
 
 echo "-------------------------------INICIO-----------------------------------------------"."<br/>";
-$meses = array('enero',
- 'febrero',
-  'marzo', 'mayo','junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
+$meses = array( 'enero',
+                'febrero',
+                'marzo',
+                'abril',
+                'mayo',
+                'junio',
+                'julio',
+                'agosto',
+                'septiembre',
+                'octubre',
+                'noviembre',
+                'diciembre');
 
 
 for ($i=0; $i < count($meses); $i++) {
