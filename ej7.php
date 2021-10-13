@@ -1,4 +1,8 @@
 <?php
+
+/*
+Ejercicio 7. Igual que el anterior pero utilizando el foreach.
+*/
 echo "-------------------------------INICIO-----------------------------------------------"."<br/>";
 $meses = array('enero', 'febrero', 'marzo', 'mayo','junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
 
