@@ -14,23 +14,19 @@
 
     echo "-------------------------------INICIO-----------------------------------------------";
     $suma = 0;
-    for ($i = 1;$i < $_GET["numero"];$i++)
-    { // i son los divisores. Se divide desde 1 hasta
-        if ($_GET["numero"] % $i == 0)
-        {
+    for ($i = 1;$i < $_GET["numero"];$i++){ // i son los divisores. Se divide desde 1 hasta
+        if ($_GET["numero"] % $i == 0){
             $suma += $i; // si es divisor se suma
-            
-            if ($suma == $_GET["numero"])
-            {
+            if ($suma == $_GET["numero"]){
                 echo "<br>" . $_GET["numero"] . " es un numero bueno";
+            }
             }
       
         }
-        
+
         
     }
-
-}
+  
 echo "<br />-------------------------------FIN-----------------------------------------------";
 ?>
    </body>
