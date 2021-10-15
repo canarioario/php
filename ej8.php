@@ -10,8 +10,8 @@ $factorial=1 ;
 $numero = $_GET["numero"];
 
 for ($i=1; $i <= $numero; $i++) { 
-     $factorial =   $factorial * $i;
-  //  $factorial *= $i;
+   //  $factorial =   $factorial * $i;
+    $factorial *= $i;
   
 }
 echo "El factorial de ". $numero . " es ". $factorial ;
