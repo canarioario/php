@@ -9,7 +9,7 @@ $browser =$_SERVER["HTTP_USER_AGENT"];
 
 echo "Tu ip es " . $ip;
 
-if(strstr($browser,"Firefox") == true){
+if(strstr($browser,"Firefox") == true){ // si contiene la palabra firefox es true y muestra el mensaje
 
    echo "<br/>El navegador que usas es Firefox Enorabuena";
 
