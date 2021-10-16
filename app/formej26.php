@@ -6,7 +6,7 @@ en el caso de que existan y tengan un valor asociado, o un mensaje 'No definido 
 */ ?>
 <?php require_once 'includes/header.php'; ?>
 <h2>Crear usuarios</h2>
-<form action="ej25.php" method="post" autocomplete="off" enctype"multipart/form-data">
+<form action="ej26.php" method="post" autocomplete="off" enctype"multipart/form-data">
         <p>Nombre: <input type="text" id="nombre" name="nombre"></p>
         <p>Apellidos: <input type="text" id="apellidos" name="apellidos"></p>
         <p>Biografia:<textarea name="bio" /> </textarea></p>
