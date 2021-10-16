@@ -3,13 +3,20 @@
 Ejercicio 22. Implemente la función filter_var para comprobar si el email que nos llega por la URL es un email valido.
 */
 
-$email= $_GET[""];
 
+function validateEmail($email){
 
-if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo("$email es un correo electronico valido");
+if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) { //comprueba que no viene vacio y que es un email
+   $status = "VALIDO";
   } else {
-    echo("$email no es correo electronico valido");
+    $status = "NO VALIDO";
   }   
+return $status;
+}
+$email= "";
 
+if (isset($_GET["email"])) { // comprueba si existe $email
+   $email = $_GET["email"];
+}
+echo validateEmail($email);
 ?>
