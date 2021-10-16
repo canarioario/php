@@ -11,7 +11,7 @@ if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) { //comprueba q
   } else {
     $status = "NO VALIDO";
   }   
-return $status;
+return $status; // devolvemos el status
 }
 $email= "";
 
