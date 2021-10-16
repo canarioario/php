@@ -14,7 +14,11 @@ function tabla($numero) {
 return $tabla;
 }
 echo "<h1>Tablas de multplicar</h1>";
-$num = 5;
-echo tabla($num);
+// $num = 5;
+// echo tabla($num) // para mostrar la tabla de 5;
 
+ for ($i=1; $i <=10 ; $i++) {      // bucle para mostrar las tablas del 1 al 10
+    echo "<h3>Tablas de multplicar</h3>";
+    echo tabla ($i);
+ }
 ?>
