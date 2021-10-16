@@ -14,7 +14,7 @@
         <p>Biografia:<textarea name="bio" /> </textarea></p>
         <p>Email: <input type="email" id="email" name="email"></p>
         <p>Numero: <input type="file" id="image" name="image"></p>
-        <p>Password: <select type="text" id="password" name="password"></p>
+        <p>Password: <input type="password" id="password" name="password"></p>
         <input type="submit">
 
     </form>

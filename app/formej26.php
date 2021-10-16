@@ -12,8 +12,8 @@ en el caso de que existan y tengan un valor asociado, o un mensaje 'No definido 
         <p>Biografia:<textarea name="bio" /> </textarea></p>
         <p>Email: <input type="email" id="email" name="email"></p>
         <p>Numero: <input type="file" id="image" name="image"></p>
-        <p>Password: <select type="text" id="password" name="password"></p>
-        <input type="submit">
+        <p>Password: <input type="password" id="password" name="password"></p>
+        <input type="submit" name="submit">
 
     </form>
     <?php require_once 'includes/footer.php'; ?>
