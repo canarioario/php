@@ -5,5 +5,13 @@ está vacía, rellenarla con texto en minúsculas y mostrarlo convertido a mayú
 en negrita.
 */
 
+$texto ="";
+if (empty ($texto)) {
+    $texto = strtoupper ("texto de relleno");
+    echo "<strong>{$texto}</strong>";
+} else {
+
+    echo " esta rellena";
+}
 
 ?>
