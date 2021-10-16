@@ -20,12 +20,13 @@ function tabla($numero, $html = null) {
     if ($html != null) {
         echo "<h3>Tablas de multplicar {$numero} </h3>";
  
-    echo 
-    "<table border=1>
+    echo  // imprimir en una tabla
+    "<table border=1> 
     <tr>
-    <th>Tabla del {$numero}</th></tr>
+            <th>Tabla del {$numero}</th>
+    </tr>
     <tr>
-          <th>$tabla</th>
+            <th>$tabla</th>
     </tr>  
      </table>"; 
     }
