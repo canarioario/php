@@ -5,4 +5,16 @@ Ejercicio 23. Implemente a una función a la que le pases un número y muestre p
 
 
 
+function tabla($numero) {
+    $tabla ="";
+    for ($i=1; $i <=10; $i++) {
+        $cuenta = $i*$numero;
+        $tabla .= "{$i} x {$numero} = {$cuenta} <br/>";          
+    }
+return $tabla;
+}
+echo "<h1>Tablas de multplicar</h1>";
+$num = 5;
+echo tabla($num);
+
 ?>
