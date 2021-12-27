@@ -6,6 +6,7 @@
   <div class="container cuerpo text-center">	
     <p><h2><img class="alineadoTextoImagen" src="images//user.png" width="50px"/> Datos de usuario:</h2></p>
     <?php echo validez($errors); ?>
+    <?php if (isset($_POST["submit"]) && (count($errors) == 0)) { valoresfrm(); } ?>
   </div>
   <div class="container">
     <form  action="frmusuarios.php" method="POST" enctype="multipart/form-data">
