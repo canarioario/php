@@ -1,6 +1,6 @@
 <?php
 try {
-    $mbd = new PDO('mysql:host=localhost;dbname=bdusuarios', 'root', ''); // conexion a la bd
+    $conexion = new PDO('mysql:host=localhost;dbname=bdusuarios', 'root', ''); // conexion a la bd
     $mensaje = "<div class='alert alert-success'> Conectado a la Base de datos Usuario!! :) </div>"; // alerta success 
     echo $mensaje; // muestra mensaje
 } catch (PDOException $e) {
