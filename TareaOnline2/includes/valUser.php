@@ -49,5 +49,6 @@ if (isset($_POST["submit"])) {
     $errors["password"] = "Introduzca una contraseña válida (6-10 caracteres) :(";
   }
 
+  
 }
 ?>
