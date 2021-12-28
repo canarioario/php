@@ -9,7 +9,6 @@ require_once 'conectarbd.php';
  $regsxpag = (isset($_GET['regsxpag']))? (int)$_GET['regsxpag']:2;
  //Establecemos el la página que vamos a mostrar, por página,por defecto la 1
  $pagina = (isset($_GET['pagina']))? (int)$_GET['pagina']:1;
-
  //Definimos la variable $inicio que indique la posición del registro desde el que se
  // mostrarán los registros de una página dentro de la paginación.
  $inicio= ($pagina>1)? (($pagina*$regsxpag)-$regsxpag): 0;
@@ -20,11 +19,9 @@ require_once 'conectarbd.php';
  $registros->execute();
  //Almacenamos en una variable los registros obtenidos de la consulta
  $registros=$registros->fetchAll(PDO::FETCH_ASSOC);
- 
  //Calculamos el número de registros obtenidos
  $totalregistros= $pdo->query("SELECT FOUND_ROWS() as total");
  $totalregistros= $totalregistros->fetch()['total'];
  //Determinamos el número de páginas de la que constará mi paginación
  $numpaginas=ceil($totalregistros/$regsxpag);
-
 ?>
