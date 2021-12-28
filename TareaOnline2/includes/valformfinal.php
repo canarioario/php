@@ -32,7 +32,7 @@ function validez($errors) {
 
 // Visualización de las variables obtenidas mediante el formulario
 function valoresfrm() {
-  global $nombre,$apellidos,$mibiograf,$correo,$password,$perfil;
+  global $nombre,$apellidos,$mibiograf,$correo,$password;
   echo  "<table id= tabla; class=table table-striped;>";
   echo "<thead>";
   echo "<tr><h4>Valores obtenidos mediante el formulario</h4></tr>";
@@ -43,15 +43,18 @@ function valoresfrm() {
   echo "<th><td><strong>Biografía: </th></strong>" . $mibiograf . "</td>";
   echo "<th><td><strong>Email: </th></strong>" . $correo . "</td>";
   echo "<th><td><strong>Contraseña: </th></strong>" . $password . "</td>";
-  echo "<th><td><strong>Perfil: </th></strong>" . $perfil . "</td>";
-  echo "<th><td><strong>Fotografía: </th></strong>" . $_FILES["image"]["tmp_name"] . "</td>";
+  if (!empty($_FILES["image"]["tmp_name"])) {
+    echo "<th><td><strong>Fotografía: </th></strong>" . $_FILES["image"]["tmp_name"] . "</td>";
+  }else{
+    echo "<th><td><strong>Fotografía: </th></strong>" . "Sin fotografia". "</td>";
+  }
   echo "</tbody>";
   echo "</table>";
 }
 
 if (isset($_POST["submit"])) {
 
-  if (!empty($_POST["name"]) && (!preg_match("/[0-9]/", $_POST["name"])) && (strlen($_POST["name"]) < 15)) {
+  if (!empty($_POST["name"]) && (!preg_match("/[0-9]/", $_POST["name"])) && (strlen($_POST["name"]) < 20)) {
     $nombre = trim($_POST["name"]);
     $nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
   } else {
@@ -87,13 +90,7 @@ if (isset($_POST["submit"])) {
     $errors["password"] = "Introduzca una contraseña válida (6-10 caracteres) :(";
   }
 
-  if (!empty($_POST["role"]) && (is_numeric($_POST["role"]))) {
-    ($_POST["role"] == 0) ? $perfil = "User" : $perfil = "Admin";
-  } else {
-    $errors["role"] = "Seleccione un perfil de usuario :(";
-  }
-
-  if (!isset($_FILES["image"]) || empty($_FILES["image"]["tmp_name"])) {
+  if (!isset($_FILES["image"]["tmp_name"])&& !empty($_FILES["image"]["tmp_name"])) {
     $errors["image"] = "Seleccione una imagen válida :(";
   }
 }

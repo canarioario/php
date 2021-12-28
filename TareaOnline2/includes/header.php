@@ -1,5 +1,5 @@
 		<meta charset="utf-8" />
-		<title> Mi Web con Php :) </title>
+		<title> PHP DAW/MGM </title>
                  <!-- Google Fonts -->
                 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<!-- Incluimos las librerías de Bootstrap 4 (CDNs) desde la Web: https://getbootstrap.com/ -->   
