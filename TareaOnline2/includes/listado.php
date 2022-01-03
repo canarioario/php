@@ -41,6 +41,7 @@ $msgresultado ="";
 <!--         <th>Contraseña</th>-->
          <th>Email</th>
          <!-- Añadimos una columna para las operaciones que podremos realizar con cada registro -->
+         <th>Imagen</th>
          <th>Operaciones</th>
        </tr>
        <?php
@@ -50,7 +51,13 @@ $msgresultado ="";
 //              echo '<td>' . $fila['password'] . '</td>' ;
               echo '<td>' . $fila['email']    . '</td>' ;
               // Enviamos a actuser.php, mediante GET, el id del registro que deseamos editar:
-              echo '<td>' . '<a href="actualizar.php?id=' . $fila['id'] . '">Editar </a>'   . '</td>' ; 
+             
+              if (!empty($_FILES["image"]["tmp_name"])) {
+                echo '<td>' . '<img src="..//..//..//images/user.png' . $fila['imagen'] . '" width="40" /> ' . $fila['imagen'] . '</td>';
+              }else{
+                echo "<td>".  "--------". "</td>";
+              }
+              echo '<td>' . '<a href="actualizar.php?id=' . $fila['id'] . '">Editar </a>' . '<a href="eliminar.php?id=' . $fila['id'] . '">Eliminar</a>' . '</td>' ; 
               echo '</tr>';
         }
        ?>
