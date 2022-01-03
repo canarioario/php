@@ -96,7 +96,8 @@ if (isset($_POST["submit"])) {
 ?>
   <body class="cuerpo">
    <div class="container centrar">
-     <a href="addUser.php">Inicio</a>
+     <a href="addUser.php">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+     <a href="includes\listado.php">Listado</a>
      <div class="container cuerpo text-center centrar">	
        <p><h2><img class="alineadoTextoImagen" src="images//user.png" width="50px"/>Añadir Usuario</h2> </p>
      </div>
