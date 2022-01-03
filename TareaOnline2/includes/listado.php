@@ -32,7 +32,7 @@ $msgresultado ="";
    <div class="container centrar">
      <a href="..//addUser.php">Inicio</a>
      <div class="container cuerpo text-center centrar">	
-       <p><h2><img class="alineadoTextoImagen" src="..//images//user.png" width="50px"/>Listar Usuarios</h2> </p>
+       <p><h2><img class="alineadoTextoImagen" src="..//images/user.png" width="50px"/>Listar Usuarios</h2> </p>
      </div>
      <?php echo $msgresultado;  ?> 
      <table class="table table-striped">
@@ -51,11 +51,11 @@ $msgresultado ="";
 //              echo '<td>' . $fila['password'] . '</td>' ;
               echo '<td>' . $fila['email']    . '</td>' ;
               // Enviamos a actuser.php, mediante GET, el id del registro que deseamos editar:
-             
-              if (!empty($_FILES["image"]["tmp_name"])) {
-                echo '<td>' . '<img src="..//..//..//images/user.png' . $fila['imagen'] . '" width="40" /> ' . $fila['imagen'] . '</td>';
+     
+              if (!empty($fila["imagen"])) {
+                echo '<td>' . '<img src="fotos/' . $fila['imagen'] . '" width="40" /> ' . $fila['imagen'] . '</td>';
               }else{
-                echo "<td>".  "--------". "</td>";
+                echo '<td>' . "-------------" . '</td>';
               }
               echo '<td>' . '<a href="actualizar.php?id=' . $fila['id'] . '">Editar </a>' . '<a href="eliminar.php?id=' . $fila['id'] . '">Eliminar</a>' . '</td>' ; 
               echo '</tr>';
