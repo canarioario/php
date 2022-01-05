@@ -96,7 +96,7 @@ if(isset($_POST['submit']))
        <p><h2><img class="alineadoTextoImagen" src="images//user.png" width="50px"/>Añadir Usuario</h2> </p>
      </div>
      <?php echo $msgresultado;  ?> 
-     <form action="adduser.php" method="post" enctype="multipart/form-data">
+     <form action="addUser.php" method="post" enctype="multipart/form-data">
        <label for="txtnombre">Nombre
        <input type="text" class="form-control" name="txtnombre" required></label>
        <br/>
