@@ -20,7 +20,6 @@ require_once 'config.php';
  $registros->execute();
  //Almacenamos en una variable los registros obtenidos de la consulta
  $registros=$registros->fetchAll(PDO::FETCH_ASSOC);
- 
  //Calculamos el número de registros obtenidos
  $totalregistros= $conexion->query("SELECT FOUND_ROWS() as total");
  $totalregistros= $totalregistros->fetch()['total'];
