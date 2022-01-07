@@ -107,7 +107,7 @@ if(isset($_POST['submit']))
        <br/>
        <label for="imagen"> Imagen <input type="file" name="imagen" class="form-control" /></label>
        </br>
-       <input type="submit" value="Guardar" name="submit" class="btn btn-success">
+       <input type="submit" value="Guardar" name="submit" class="btn btn-primary">
      </form>
    </div>
   </body>

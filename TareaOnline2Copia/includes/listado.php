@@ -121,6 +121,5 @@ if($registros){
       </ul>         
     </nav>
     <?php endif;  //if($totalregistros>=1): ?>
-      <a href="#null" onclick="printContent('printTable')">Imprimir</a>
-  </body>
+      <input type="submit" value="Imprimir" name="submit" class="btn btn-primary">
 </html>
