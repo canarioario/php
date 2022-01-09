@@ -45,7 +45,7 @@ require_once 'config.php';
 //              echo '<td>' . $fila['password'] . '</td>' ;
               echo '<td>' . $fila['email']    . '</td>' ;
                if (!empty($fila['imagen'])) {
-                echo '<td>' . '<img src="/TareaOnline2Copia/includes/fotos/' . $fila['imagen'] . '" width="40" /> ' . $fila['imagen'] . '</td>';
+                echo '<td>' . '<img src="./fotos/' . $fila['imagen'] . '" width="40" /> ' . $fila['imagen'] . '</td>';
               }else{
                 echo '<td>' . "-------------" . '</td>';
               }
