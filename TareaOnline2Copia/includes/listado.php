@@ -1,6 +1,7 @@
 <?php
 require_once 'config.php';
 require_once 'paginador.php';
+
 if($registros){
   $msgresultado = '<div class="alert alert-success">' . "El listado se realizó correctamente!! :)" . '</div>';
 }else{
@@ -75,8 +76,8 @@ if($registros){
                 echo  "-------------" ;
               }
                  ?>     </td>
-                <td> <a href="actualizar.php?id=' . $reg['id'] . '">Editar </a><a href="eliminar.php?id=' . $reg['id'] . '">Eliminar</a></td>
-             
+                <td> <a href="actualizar.php?accion=actualizar&id=<?= $reg['id'] ?>">Editar </a><a href="eliminar.php?accion=eliminar&id=<?= $reg['id'] ?>">Eliminar</a></td>
+                
               </tr>           
               <?php 
                   endforeach; 
@@ -121,5 +122,5 @@ if($registros){
       </ul>         
     </nav>
     <?php endif;  //if($totalregistros>=1): ?>
-      <input type="submit" value="Imprimir" name="submit" class="btn btn-primary">
+      <input type="submit" value="Imprimir" name="submit" class="btn btn-primary" >
 </html>
