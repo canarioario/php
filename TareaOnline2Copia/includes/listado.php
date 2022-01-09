@@ -13,7 +13,7 @@ if($registros){
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Paginación con PDO</title>
+    <title>Listado</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,7 +52,7 @@ if($registros){
               <li><a href="listado.php?regsxpag=10"><i class="icon-fixed-width icon-th"></i> 10</a></li>
             </ul>
           </div>
-          
+          <a href="imprimir.php"  type="submit" value="Imprimir" name="submit" class="btn btn-primary">Imprimir</a>
           <table class="table table-bordered table-striped text-center">
             <thead>
               <tr>
@@ -122,5 +122,5 @@ if($registros){
       </ul>         
     </nav>
     <?php endif;  //if($totalregistros>=1): ?>
-      <a href="imprimir.php"  type="submit" value="Imprimir" name="submit" class="btn btn-primary">Imprimir</a>
+     
 </html>

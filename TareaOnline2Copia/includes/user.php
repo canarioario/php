@@ -80,7 +80,7 @@ if(isset($_POST['submit']))
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Base de Datos con PHP y PDO</title>
+    <title>Alta Usuario</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--    Referencia a la CDN de la hoja de estilos de Bootstrap-->
