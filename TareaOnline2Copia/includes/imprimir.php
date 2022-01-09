@@ -1,13 +1,14 @@
 <?php
-require_once 'config.php';
-require_once '/dompdf_1-1-1/dompdf/autoload.inc.php';  
-use Dompdf\Dompdf; //para incluir el namespace de la librería    
-$dompdf = new DOMPDF();
-$dompdf->set_paper("A4");
+include_once "./dompdf_1-1-1/dompdf/autoload.inc.php";
+use Dompdf\Dompdf;
+use Dompdf\Options;
+$dompdf = new Dompdf(array('enable_remote' => true));
 ob_start();
-include 'mi_template_html_de_pdf.php';
-$html_para_pdf = ob_get_clean();
-$dompdf->load_html($html_para_pdf);
-$dompdf->render(); //este comando renderiza el PDF
-$output = $dompdf->output(); //extrae el contenido renderizado del PDF
-file_put_contents('mipdf.pdf', $output); //guarda el PDF en un fichero llamado mipdf.pdf ?>
+include "listadoImprimir.php";
+$html = ob_get_clean() ;
+$dompdf->loadHtml($html);
+$dompdf->set_option('isRemoteEnabled', true);
+$dompdf->render();
+$dompdf->stream("Listado.pdf");
+echo $dompdf->output();
+?>
