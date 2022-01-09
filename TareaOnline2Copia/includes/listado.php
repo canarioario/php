@@ -42,7 +42,7 @@ if($registros){
           </div>  
           
           <div class="btn-group open">
-            <a class="btn btn-primary" href="#"><i class="icon-user"></i> Registros por página:</a>
+            <a class="btn btn-primary" href="#"><i class="icon-user"></i> Mostrar:</a>
             <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
              </span></a>
             <ul class="dropdown-menu">
