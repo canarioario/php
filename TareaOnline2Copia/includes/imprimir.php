@@ -4,6 +4,7 @@ use Dompdf\Dompdf;
 use Dompdf\Options;
 $options = new Options();
 $options-> set('isRemoteEnabled', true);
+// $options-> set('chroot', realpath(''));
 $dompdf = new Dompdf($options);
 ob_start();
 include "listadoImprimir.php";

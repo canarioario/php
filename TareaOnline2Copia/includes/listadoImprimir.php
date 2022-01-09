@@ -36,7 +36,7 @@ require_once 'config.php';
 <!--         <th>Contraseña</th>-->
          <th>Email</th>
          <!-- Añadimos una columna para las operaciones que podremos realizar con cada registro -->
-         <th>Imagen</th>
+     
        </tr>
        <?php
         while($fila = $resultsquery->fetch(PDO::FETCH_ASSOC)){
@@ -44,11 +44,7 @@ require_once 'config.php';
               echo '<td>' . $fila['nombre']   . '</td>' ;
 //              echo '<td>' . $fila['password'] . '</td>' ;
               echo '<td>' . $fila['email']    . '</td>' ;
-               if (!empty($fila['imagen'])) {
-                echo '<td>' . '<img src="./fotos/' . $fila['imagen'] . '" width="40" /> ' . $fila['imagen'] . '</td>';
-              }else{
-                echo '<td>' . "-------------" . '</td>';
-              }
+            
               echo '</tr>';
         }
        ?>
