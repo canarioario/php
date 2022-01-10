@@ -27,7 +27,6 @@ if(isset($_POST['submit']))
     // Verificamos la carga de la imagen
      var_dump($_FILES["imagen"]);
     // die();
-
     // Comprobamos si existe el directorio fotos, y si no, lo creamos
        if(!is_dir("fotos"))
          { $dir = mkdir("fotos", 0777, true);  }
@@ -52,7 +51,7 @@ if(isset($_POST['submit']))
     if(count($errores)==0){
       try{  //Definimos la instrucción SQL parametrizada 
           $sql = "INSERT INTO usuarios(nombre,password,email,imagen)
-                         VALUES (:nombre,:password,:email ,:imagen)";
+                         VALUES (:nombre,:password,:email,:imagen)";
           // Preparamos la consulta...
           $query = $conexion->prepare($sql); 
           // y la ejecutamos indicando los valores que tendría cada parámetro
@@ -81,7 +80,7 @@ if(isset($_POST['submit']))
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Base de Datos con PHP y PDO</title>
+    <title>Alta Usuario</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--    Referencia a la CDN de la hoja de estilos de Bootstrap-->
@@ -90,8 +89,8 @@ if(isset($_POST['submit']))
   <body class="cuerpo">
     <div class="centrar">	
    <div class="container centrar">
-     <a href="addUser.php">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-     <a href="includes/listado.php">Listado</a>
+     <a href="user.php">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+     <a href="listado.php">Listado</a>
      <div class="container cuerpo text-center centrar">	 
        <p><h2><img class="alineadoTextoImagen" src="../images/user.png" width="50px"/>Añadir Usuario</h2> </p>
      </div>
@@ -108,7 +107,7 @@ if(isset($_POST['submit']))
        <br/>
        <label for="imagen"> Imagen <input type="file" name="imagen" class="form-control" /></label>
        </br>
-       <input type="submit" value="Guardar" name="submit" class="btn btn-success">
+       <input type="submit" value="Guardar" name="submit" class="btn btn-primary">
      </form>
    </div>
   </body>

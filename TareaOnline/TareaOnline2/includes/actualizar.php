@@ -112,12 +112,13 @@ if (isset($_POST['submit']))
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
   <body class="cuerpo">
-  <div class="centrar">	
    <div class="container centrar">
-     <a href="user.php">Inicio</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-     <a href="listado.php">Listado</a>
-     <div class="container cuerpo text-center centrar">	 
-       <p><h2><img class="alineadoTextoImagen" src="../images/user.png" width="50px"/>Actualizar Usuario</h2> </p>
+     <div class="container cuerpo text-center">	
+      <ul>
+       <li> <a href="listado.php"> Listar usuarios</a></li>
+       <li> <a href="..//addUser.php"> Añadir usuario</a></li>
+     </ul>
+       <p><h2><img class="alineadoTextoImagen" src="..//images/user.png" width="50px"/>Actualizar Usuario</h2> </p>
      </div>
      <?php echo $msgresultado;  ?> 
      <form action="actualizar.php" method="post" enctype="multipart/form-data">
