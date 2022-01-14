@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'includes/config.php';
 //var_dump($_POST);
 // Mensaje que indicará al usuario si la inserción se realizó correctamente o no
 
