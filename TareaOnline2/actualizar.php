@@ -108,12 +108,7 @@ if (isset($_POST['submit']))
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Base de Datos con PHP y PDO</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!--    Referencia a la CDN de la hoja de estilos de Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <?php require_once 'includes/header.php'; ?>
   </head>
   <body class="cuerpo">
   <div class="centrar">	
@@ -145,4 +140,7 @@ if (isset($_POST['submit']))
      </form>
    </div>
   </body>
+  <footer>
+  <?php require_once 'includes/footer.php'; ?>
+  </footer>
 </html>

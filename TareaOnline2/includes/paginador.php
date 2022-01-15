@@ -1,12 +1,15 @@
 <?php
+require_once 'header.php';
 require_once 'config.php';
+
+
 /**
  * La página a la que deseamos acceder mediante los botones de paginación se recibirá 
  * a través de la variable 'pagina' de GET. Si no se recibe ningún valor, se tomará, por 
  * defecto, el mostrar la página nº1
  */
- //Establecemos el número de registroa a mostrar por página,por defecto 2
- $regsxpag = (isset($_GET['regsxpag']))? (int)$_GET['regsxpag']:2;
+ //Establecemos el número de registroa a mostrar por página,por defecto 4
+ $regsxpag = (isset($_GET['regsxpag']))? (int)$_GET['regsxpag']:4;
  //Establecemos el la página que vamos a mostrar, por página,por defecto la 1
  $pagina = (isset($_GET['pagina']))? (int)$_GET['pagina']:1;
 

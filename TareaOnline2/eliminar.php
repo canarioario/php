@@ -11,11 +11,12 @@ if(isset($_GET['id'])&& (is_numeric($_GET['id'])))
       $query->execute([ 'id' => $id ]);
       //Supervisamos si la inserción se realizó correctamente... 
       if($query){
-         //echo '<div class="alert alert-success">' . "La eliminación del usuario se realizó correctamente!! :)" . '</div>';
+        // echo '<div class="alert alert-success" style="margin-top:5px;">La eliminación del usuario se realizó correctamente!! </div>';
          header("Location:listado.php");
       }// o no :(
     }catch (PDOException $ex){
-        echo '<div class="alert alert-success">' . "La eliminación del usuario se realizó correctamente!! :( <br/>(" .$ex->getMessage(). ')</div>';
+        echo '<div class="alert alert-success" style="margin-top:5px;">La eliminación del usuario se realizó correctamente!! </div>';
+        
         die();
     }
 } else {

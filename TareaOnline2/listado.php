@@ -11,17 +11,9 @@ if($registros){
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Listado</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <!-- Custom styles for this template -->
-    <link href="css/misestilos.css" rel="stylesheet">
+  <?php require_once 'includes/header.php'; ?>
   </head>
   <body>
   <div class="centrar">	
@@ -123,5 +115,7 @@ if($registros){
       </ul>         
     </nav>
     <?php endif;  //if($totalregistros>=1): ?>
-     
+      <footer>
+  <?php require_once 'includes/footer.php'; ?>
+  </footer>
 </html>
