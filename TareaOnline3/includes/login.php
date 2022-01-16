@@ -17,7 +17,7 @@
       <br/>
       <label><input type="checkbox" name="recuerdo" <?php if(isset($_COOKIE['recuerdo'])){echo " checked";} ?> >Recuérdeme :)</label>
       <br/>     
-      <label><input type="checkbox" name="abierta" <?php if(isset($_COOKIE['abierta'])){echo " checked";} ?> >Mantener la sesión abierta... :O</label>
+   <!--   <label><input type="checkbox" name="abierta"  --><?php //if(isset($_COOKIE['abierta'])){echo " checked";} ?>  <!-- >Mantener la sesión abierta... :O</label> -->
       <br/>     
 
       <?php

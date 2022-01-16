@@ -1,19 +1,16 @@
 <?php
-  $emailok = "pepe";
+  $emailok = "marcos";
   $passok = "123";
   if(isset($_POST['submit']))
     { // Comprobamos que recibimos los datos y que no están vacíos
       if((isset($_POST['email'])&& isset($_POST['password'])) 
         && (!empty($_POST['email'])&& !empty($_POST['password']))){
-
-          // consulta sql
-
-           
-         if ($_POST['email'] == $emailok && $_POST['password'] == $passok) {
-            session_start();
+          // preguntar como hacer con consulta sql
+         if ($_POST['email'] == $emailok && $_POST['password'] == $passok) { // comprobamos con email y pass son valido
+            session_start(); // inciamos sesion
             $_SESSION['logueado']=$_POST['email'];
             $_SESSION['email']= $_POST['email'];
-            //Creamos un par de cookies para recordar el user/pass. Tcaducidad=15días
+            //Creamos un par de cookies para recordar el user/pass. Tiempo caducidad=15días
             if(isset($_POST['recuerdo'])&&($_POST['recuerdo']=="on")) // Si está seleccioniado el checkbox...
              { // Creamos las cookies para ambas variables 
                setcookie ('email' ,$_POST['email'] ,time() + (15 * 24 * 60 * 60)); 
