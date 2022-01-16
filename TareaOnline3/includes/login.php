@@ -7,7 +7,7 @@
   </div>
   <div class="container">
     <form  action="frmLogin.php" method="POST">
-      <label for="name">Email:
+      <label for="name">Nombre:
         <input type="text" name="usuario" class="form-control" value="<?php if(isset($_COOKIE['usuario'])) { echo $_COOKIE['usuario']; } ?>" /> 
       </label>
       <br/>
