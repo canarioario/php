@@ -18,7 +18,7 @@
   </div>
 </nav>
 <div class="centrar">	
-  <div class="container cuerpo text-center">	
+  <div class="container cuerpo text-center">	 
     <h1><strong>MiSitio-</strong>Inicio</h1>  
     <p><h2><img class="alineadoTextoImagen" src="images//user.png" width="50px"/>Bienvenido  <?php if(isset($_COOKIE['abierta'])){ echo "'" . $_COOKIE['abierta'] . "'" ; } else { echo "'" . $_SESSION['logueado'] . "'" ;} ?> </h2> </p>
   </div>
