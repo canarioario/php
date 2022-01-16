@@ -1,25 +1,25 @@
 <?php
-  $emailok = "marcos";
+  $usuariook = "marcos";
   $passok = "123";
   if(isset($_POST['submit']))
     { // Comprobamos que recibimos los datos y que no están vacíos
-      if((isset($_POST['email'])&& isset($_POST['password'])) 
-        && (!empty($_POST['email'])&& !empty($_POST['password']))){
+      if((isset($_POST['usuario'])&& isset($_POST['password'])) 
+        && (!empty($_POST['usuario'])&& !empty($_POST['password']))){
           // preguntar como hacer con consulta sql
-         if ($_POST['email'] == $emailok && $_POST['password'] == $passok) { // comprobamos con email y pass son valido
+         if ($_POST['usuario'] == $usuariook && $_POST['password'] == $passok) { // comprobamos con usuario y pass son valido
             session_start(); // inciamos sesion
-            $_SESSION['logueado']=$_POST['email'];
-            $_SESSION['email']= $_POST['email'];
+            $_SESSION['logueado']=$_POST['usuario'];
+            $_SESSION['usuario']= $_POST['usuario'];
             //Creamos un par de cookies para recordar el user/pass. Tiempo caducidad=15días
             if(isset($_POST['recuerdo'])&&($_POST['recuerdo']=="on")) // Si está seleccioniado el checkbox...
              { // Creamos las cookies para ambas variables 
-               setcookie ('email' ,$_POST['email'] ,time() + (15 * 24 * 60 * 60)); 
+               setcookie ('usuario' ,$_POST['usuario'] ,time() + (15 * 24 * 60 * 60)); 
                setcookie ('password',$_POST['password'],time() + (15 * 24 * 60 * 60));
                setcookie ('recuerdo',$_POST['recuerdo'],time() + (15 * 24 * 60 * 60));
               } else {  //Si no está seleccionado el checkbox..
                 // Eliminamos las cookies
-                if(isset($_COOKIE['email'])) { 
-                   setcookie ('email',""); } 
+                if(isset($_COOKIE['usuario'])) { 
+                   setcookie ('usuario',""); } 
                 if(isset($_COOKIE['password'])) { 
                    setcookie ('password',""); } 
                 if(isset($_COOKIE['recuerdo'])) { 
@@ -28,7 +28,7 @@
              // Lógica asociada a mantener la sesión abierta 
              if(isset($_POST['abierta'])&&($_POST['abierta']=="on")) // Si está seleccionado el checkbox...
              { // Creamos una cookie para la sesión 
-               setcookie ('abierta' ,$_POST['email'],time() + (15 * 24 * 60 * 60)); 
+               setcookie ('abierta' ,$_POST['usuario'],time() + (15 * 24 * 60 * 60)); 
               } else {  //Si no está seleccionado el checkbox..
                 // Eliminamos la cookie
                 if(isset($_COOKIE['abierta'])) { 
