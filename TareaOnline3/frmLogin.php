@@ -25,7 +25,7 @@
                 if(isset($_COOKIE['recuerdo'])) { 
                    setcookie ('recuerdo',""); }    
              }
-             // Lógica asociada a mantener la sesión abierta 
+             // Lógica asociada a mantener la sesión abierta  
              if(isset($_POST['abierta'])&&($_POST['abierta']=="on")) // Si está seleccionado el checkbox...
              { // Creamos una cookie para la sesión 
                setcookie ('abierta' ,$_POST['usuario'],time() + (15 * 24 * 60 * 60)); 
