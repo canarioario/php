@@ -79,7 +79,7 @@ return array (
     'normal' => $fontDir . '/DejaVuSerif',
   ),
   'lato' => array(
-    'normal' => $fontDir . '/lato_normal_ef680d3bb7969ba8f464758490769d0a',
+    'normal' => $fontDir . '/lato_normal_66021783f7fddfe7480e1bf6c3d60d6d',
   ),
 );
 }; ?>

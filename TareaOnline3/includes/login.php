@@ -1,5 +1,5 @@
 <div class="encabezado text-center">	
-  <h1><img class="alineadoTextoImagen" src="images//bombilla.png" />DAWES-Práctica#2:Sesiones y Cookies</h1>
+  <h1><img class="alineadoTextoImagen" src="images//bombilla.png" />DAWES-Práctica#3:Sesiones y Cookies</h1>
 </div>    
 <div class="centrar">	
   <div class="container cuerpo text-center">	
